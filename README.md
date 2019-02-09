@@ -3,6 +3,7 @@ utility scripts for quickbooks
 
 
 **verifyandsendiferror.ps1:**
+---
 Quickbooks does not have an email alert if the scheduled backup fails.  This can result in the data corruption not being caught until many days have passed, thereby creating a lot of manual work for the end user.  This script checks the backup log and sends an email to stake holders so they can revert to a very recent backup quickly, thereby saving them the headache of having to manually enter many days of work.
 
 This script assumes you have some familiarity with powershell and execution policies
