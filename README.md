@@ -22,6 +22,6 @@ I recommend setting up a separate drive or network location for your backups.
 Once you have the script working you should create a new scheduled task to run this script shortly after your
 scheduled Quickbooks backup.  That way you will have fast notice so you can stop your users from working and return to a good working copy of Quickbooks. 
 
-I run my Quickbooks backups on an hourly basis so my users can recover from a data verification error quickly and have mininmal manual entries to catch up to.
-If you do this you may find that you will have to keep quite a number of copies so you can recover from at least 3 or more days previously.
+I run my Quickbooks backups on an hourly basis by editing the task created in task scheduler so my users can recover from a data verification error quickly and have mininmal manual entries to catch up to.
+If you do this you may find that you will have to keep quite a number of copies so you can recover from at least 3 or more days previously.  I have set my retained backups to the maximum of 99.  Your settings may vary.
 
