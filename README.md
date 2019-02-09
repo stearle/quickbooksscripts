@@ -1,5 +1,6 @@
 # quickbooksscripts
 utility scripts for quickbooks
+there is only one script for now, but I suspect that more will be required
 
 
 **verifyandsendiferror.ps1:**
