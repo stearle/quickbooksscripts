@@ -52,7 +52,8 @@ for($x=$lastentry; $x -lt $data.Length; $x++){
         $SMTPServer = "smtp.gmail.com"
         $SMTPClient = New-Object Net.Mail.SmtpClient($SMTPServer, 587) 
         $SMTPClient.EnableSsl = $true 
-        $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("user@example.com", "<password>"); 
+        # Change the user name and password to that of your sending email account
+        $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("user@gmail.com", "<password>"); 
         $SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body)
     }
 }
