@@ -21,6 +21,8 @@ cp "<Path to original QBBackup.log>" "<Path to working location>"
 $data = Get-Content "<Path to working location>\QBBackup.log"
 $count = 0
 $lastentry = 0
+# Find the last entry in the log. We don't want any of the other
+# entries as we are only looking to catch the latest failure
 ForEach ($line IN $data){
     $count += 1
     if($line -eq "**********************************************"){
