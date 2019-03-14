@@ -48,7 +48,7 @@ for($x=$lastentry; $x -lt $data.Length; $x++){
         # email addresses in the format of  John <user@example.com>
         # the <> must be included
         # if you do not then the email will fail
-        $EmailTo = @("User1 <user1@gmail.com>", "User1 <user2@gmail.com>", "User1 <user3@gmail.com>") 
+        $EmailToAddresses = @("User1 <user1@gmail.com>", "User1 <user2@gmail.com>", "User1 <user3@gmail.com>") 
         $Subject = "Notification of Quickbooks backup failure" 
         $Body = $data[$x]
         $SMTPServer = "smtp.gmail.com"
@@ -56,7 +56,9 @@ for($x=$lastentry; $x -lt $data.Length; $x++){
         $SMTPClient.EnableSsl = $true 
         # Change the user name and password to that of your sending email account
         $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("user@gmail.com", "<password>"); 
-        $SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body)
+        Foreach($EmailTo in $EmailToAddresses){
+            $SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body)
+        }
     }
 }
 if($backupok -eq $true){
